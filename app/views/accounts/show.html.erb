@@ -1,0 +1,70 @@
+
+  <div>I am pleased to provide you with access to a 3scale system environment for <%= @account.provider_name %>. &nbsp;The portal has been lightly skinned and if you choose to partner with 3scale, this will be refined in discussion with you. &nbsp;There's a little bit of dummy content to help you to imagine the operational environment and to help us set up the skins, but we will delete this when everything is setup.</div>
+  <div><br></div>
+  <div><b>3SCALE SYSTEM USER ACCESS CREDENTIALS</b></div>
+  <div><br></div>
+  <div>---&nbsp;<b>Admin</b></div>
+  <div>There are two domains here:</div>
+  <blockquote style="margin:0 0 0 40px;border:none;padding:0px">
+    <div>1. your admin dashboard: <a href="https://<%= @account.provider_id %>-admin.3scale.net/" target="_blank">https://<%= @account.provider_id %>-admin.3scale.net/</a></div>
+    <div>2. the admin view of the portal: <a href="https://<%= @account.provider_id %>.3scale.net/" target="_blank">https://<%= @account.provider_id %>.3scale.net/</a></div>
+    </blockquote>
+  <div><br></div>
+  <blockquote style="margin:0 0 0 40px;border:none;padding:0px">
+    <div>* id: <b><%= @account.provider_id %></b></div>
+    <div>* pwd: <b><%= @account.password %></b></div>
+    </blockquote>
+  <div><br></div>
+  <div>---&nbsp;<b>Developer/Partner portal</b></div>
+  <div>To see the portal fully as a user would see it, we recommend opening another browser and logging in:</div>
+  <blockquote style="margin:0 0 0 40px;border:none;padding:0px">
+    <div><a href="https://<%= @account.provider_id %>.3scale.net/" target="_blank">https://<%= @account.provider_id %>.3scale.net/</a></div>
+    </blockquote>
+  <div><br></div>
+  <blockquote style="margin:0 0 0 40px;border:none;padding:0px">
+    <div>* Cover code: <b><%= @account.cover_code %></b></div>
+    <div>* id: <b><%= @account.developer_id %></b></div>
+    <div>* pwd: <b><%= @account.password %></b></div>
+    </blockquote>
+  <div><br></div>
+
+  <div><b>INITIAL SETUP</b></div>
+  <div><br></div>
+  <div>Once you login to the admin dashboard, you can invite colleagues as additional admins of your account at the following section, under "users":</div>
+  <blockquote style="margin:0 0 0 40px;border:none;padding:0px">
+    <div><a href="https://<%= @account.provider_id %>-admin.3scale.net/admin/account" target="_blank">https://<%= @account.provider_id %>-admin.3scale.net/p/admin/account</a></div>
+    </blockquote>
+  <div><br></div>
+  
+  <div><b>GETTING STARTED - INTEGRATION OF YOUR API WITH 3SCALE</b></div>
+  <div><br></div>
+  <div>In order to integrate your API with our solution, here is some additional information to help you get started. This will enable you to set up the calls to the 3scale backend and provides you with some test keys for the system to authenticate and monitor traffic.  It may help if you follow through the <a href="https://support.3scale.net/quickstarts/home" target="_blank"><b>Hello World API Quickstart guide</b></a>.</div>
+  <div><br></div>
+  <div>--- <b>Plugin setup</b></div>
+  <div><br></div>
+  <div>Plugins are available for a number of languages which will accelerate your integration and calls to the 3scale API. &nbsp;From the 3scale Libraries section you can get hands-on with the <a href="https://support.3scale.net/libraries" target="_blank">plugin of your choice</a>.</div>
+  <div><br></div>
+  <div>Active Docs will help you to practice calls on the 3scale Service Management API:</div>
+  <blockquote style="margin:0 0 0 40px;border:none;padding:0px">
+  <div><a href="https://<%= @account.provider_id %>-admin.3scale.net/p/admin/api_docs#operation/0" target="_blank">Authorization calls</a></div>
+  <div><a href="https://<%= @account.provider_id %>-admin.3scale.net/p/admin/api_docs#operation/51" target="_blank">Reporting traffic</a></div>
+  <div><a href="https://<%= @account.provider_id %>-admin.3scale.net/p/admin/api_docs#operation/26" target="_blank">Combined authorization and reporting calls</a></div>
+  </blockquote>
+  <div><br></div>
+  <div>--- <b>API credentials</b></div>
+  <div><br></div>
+  <div>To get started on the API you need to configure the plugin as follows:</div>
+  <div><br></div>
+  <div>&nbsp; * The servers on our side to configure the plugin to talk to are at <a href="http://su1.3scale.net" target="_blank">http://su1.3scale.net</a></div>
+  <div>&nbsp; * Your private provider key is available at: <a href="https://<%= @account.provider_id %>-admin.3scale.net/p/admin/account" target="_blank">https://<%= @account.provider_id %>-admin.3scale.net/p/admin/account</a></div>
+  <div><br></div>
+  <div>We created some test applications and one of these is:</div>
+  <div><br></div>
+  <div>&nbsp; * Account: <%= @account.buyer_name %></div>
+  <div>&nbsp; * Name: <%= @account.app_name %></div>
+  <div>&nbsp; * Application ID: <b><%= @account.app_id %></b></div>
+  <div>&nbsp; * Application Key: <b><%= @account.app_key %></b></div>
+  <div><br></div>
+  <div>So when testing the plugin, using the provider key, and this App_ID / Key you should be able to make traffic show in the system.</div>
+  <div><br></div>
+  <div>If you have any questions about the 3scale system setup or need further help with the portal please don't hesitate to contact Mark Cheshire.  Also feel free to contact me for general questions or for next steps in the evaluation.</div>

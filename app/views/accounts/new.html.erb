@@ -1,0 +1,44 @@
+<h1>Enter details for Enterprise Instance</h1>
+
+<p>Remember to create the Provider account with:
+  <ul>
+    <li>user called "provider"</li>
+    <li>email "mark+customer@3scale.net</li>
+    <li>123456</li>
+    <li>First Name: Customer name</li>
+    <li>Last Name: "Admin"</li>
+  </ul>
+</p>
+
+<p>Provider user account is changed</p>
+<p>Sample1 developer account is setup with desired credentials</p>
+<p>Buyer account is created with standard credentials</p>
+
+<%= form_for(@account) do |f| %>
+
+<div class="field">
+  <%= f.label :site_url %><br />
+  <%= f.text_field :site_url %>
+</div>
+
+  <div class="field">
+    <%= f.label :provider_name %><br />
+    <%= f.text_field :provider_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :developer_id %><br />
+    <%= f.text_field :developer_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :provider_key %><br />
+    <%= f.text_field :provider_key %>
+  </div>
+
+
+  <div class="actions"><br />
+    <%= f.submit "Create intro email" %>
+  </div>
+
+<% end %>
