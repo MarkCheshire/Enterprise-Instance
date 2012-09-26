@@ -1,39 +1,59 @@
 <h1>Enter details for Enterprise Instance</h1>
 
-<p>Remember to create the Provider account with:
+<p>Remember to SIGNUP the Provider account with:
   <ul>
-    <li>user called "provider"</li>
-    <li>email "mark+customer@3scale.net</li>
-    <li>123456</li>
-    <li>First Name: Customer name</li>
+    <li>First Name: CUSTOMER NAME</li>
     <li>Last Name: "Admin"</li>
+    <li>email "mark+CUSTOMER@3scale.net</li>
+    <li>user called "provider" - small caps important</li>
+    <li>123456</li>
   </ul>
 </p>
 
-<p>Provider user account is changed</p>
-<p>Sample1 developer account is setup with desired credentials</p>
-<p>Buyer account is created with standard credentials</p>
+<p>Next:
+  <ul>
+    <li>Then login and accept the offer to create sample apps.</li>
+    <li>Add the logo.</li>
+    <li>Upgrade all switches to Enterprise</li>
+  </ul>
+</p>
+
+<p>Only then generate the credentials email.  Proof read the email and make any edits as necessary before sending out</p>
+
+<p>
+Actions performed by this Enterprise Instance setup script:
+  <ul>
+    <li>Provider user account is changed (userid and pwd)</li>
+    <li>Sample1 developer account is setup with desired credentials</li>
+    <li>Buyer account is created with standard credentials</li>
+    <li>Email template is generated</li>
+  </ul>
+</p>
 
 <%= form_for(@account) do |f| %>
 
 <div class="field">
   <%= f.label :site_url %><br />
   <%= f.text_field :site_url %>
+  Right click the "Site" link on top right (make sure access_code, but NOT cms_token is included)
 </div>
 
   <div class="field">
     <%= f.label :provider_name %><br />
     <%= f.text_field :provider_name %>
+    Full provider name with spaces and capitalization to be used in the email text
   </div>
 
   <div class="field">
     <%= f.label :developer_id %><br />
     <%= f.text_field :developer_id %>
+    User id for the developer account (the provider account id is based on the subdomain)
   </div>
 
   <div class="field">
     <%= f.label :provider_key %><br />
     <%= f.text_field :provider_key %>
+    The key from the provider account page
   </div>
 
 
